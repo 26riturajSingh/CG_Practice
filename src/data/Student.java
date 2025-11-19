@@ -10,6 +10,10 @@ public class Student {
     private String gender;
     List<String> activities = new ArrayList<>();
 
+    public Student(String name){
+        this.name = name;
+    }
+
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
         this.gradeLevel = gradeLevel;
