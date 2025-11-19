@@ -14,12 +14,19 @@ public class StreamApiExample {
 
     public static void main(String[] args) {
         Map<String, List<String >> map = StudentDataBase.getAllStudents().stream()
+                .peek(System.out::println)
                 .filter(p)
+                .peek((s)-> {
+                    System.out.println("After 1st filter: " + s);
+                })
                 .filter(new Predicate<Student>() {
                     @Override
                     public boolean test(Student student) {
                         return student.getGpa()>2.5;
                     }
+                })
+                .peek((s)-> {
+                    System.out.println("After 2nd filter: " + s);
                 })
                 .collect(Collectors.toMap(
                         s -> s.getName(),        // Lambda for key
