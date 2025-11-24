@@ -6,9 +6,29 @@ import java.util.List;
 public class Student {
     private String name;
     private int gradeLevel;
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int nb) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+        this.notebooks = nb;
+    }
+
     private double gpa;
     private String gender;
+
+    public int getNotebooks() {
+        return notebooks;
+    }
+
+    public void setNotebooks(int notebooks) {
+        this.notebooks = notebooks;
+    }
+
     List<String> activities = new ArrayList<>();
+    private int notebooks;
 
     public Student(String name){
         this.name = name;
