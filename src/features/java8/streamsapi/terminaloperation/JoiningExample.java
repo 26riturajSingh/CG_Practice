@@ -1,4 +1,4 @@
-package features.java8.terminaloperation;
+package features.java8.streamsapi.terminaloperation;
 
 import data.Student;
 import data.StudentDataBase;
