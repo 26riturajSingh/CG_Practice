@@ -25,8 +25,16 @@ public class ComparingExample1 {
         return list;
     }
 
+    public static List<Student> nullValue(){
+        List<Student> list = StudentDataBase.getAllStudentsNull();
+
+        list.sort(Comparator.nullsFirst(nameCompa));
+        return list;
+    }
+
     public static void main(String[] args) {
 //        nameOrder().forEach(c1);
-            nameGpaOrder().forEach(c1);
+//            nameGpaOrder().forEach(c1);
+            nullValue().forEach(c1);
     }
 }
