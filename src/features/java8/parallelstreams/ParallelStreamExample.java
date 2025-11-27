@@ -23,6 +23,7 @@ public class ParallelStreamExample {
     }
 
     public static void main(String[] args) {
+        System.out.println(Runtime.getRuntime().availableProcessors());
         System.out.println("Sequential : " + timeTaken(ParallelStreamExample::sequenialStream, 20 ));
         System.out.println("Parallel : " + timeTaken(ParallelStreamExample::parallelSream, 20 ));
 
